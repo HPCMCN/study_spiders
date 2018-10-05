@@ -5,7 +5,7 @@
 
 class Pipeline(object):
     """数据保存"""
-    def process_item(self, item, spider):
-        print(u"[INFO]: pipeline.process_item: {}".format(item.data["url"]))
+    def process_item(self, item):
+        print("[INFO]: pipeline.process_item: {}".format(item.data["url"]))
 
 

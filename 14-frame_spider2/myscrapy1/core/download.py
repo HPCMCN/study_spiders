@@ -37,7 +37,6 @@ class Download(object):
         return Response(
             url=rv.url,
             content=rv.content,
-            text=rv.text,
             headers=rv.headers,
             encoding=rv.encoding,
             status_code=rv.status_code
