@@ -28,3 +28,7 @@ DOWNLOAD_MINDDLEWARES = [
 ASYNC_TYPE = "coroutine"
 ASYNC_COUNT = 10
 TIME_SLEEP = 0.01
+
+# ROLE = None
+ROLE = "mater"
+# ROLE = "slave"

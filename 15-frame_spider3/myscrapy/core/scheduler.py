@@ -3,9 +3,16 @@
 # Power by HPCM   2018-09-27 15:09:53
 
 from hashlib import sha1
-from six.moves.queue import Queue
 # noinspection PyPackageRequirements
 import w3lib.url
+from ..config.default_setting import *
+if ROLE == "master" or "slave":
+    from ..utils.queue import Queue
+elif ROLE is None:
+    from six.moves.queue import Queue
+else:
+    raise ImportError("Not Support type of {}".format(ROLE))
+# noinspection PyPackageRequirements
 
 
 # noinspection PyBroadException,SpellCheckingInspection
