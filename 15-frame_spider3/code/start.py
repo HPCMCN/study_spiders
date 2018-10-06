@@ -2,9 +2,13 @@
 # -*- coding:utf-8 -*-
 # Power by HPCM   2018-09-27 16:03:20
 # from myscrapy.http.request import Request
+import time
+
 from myscrapy.core.engine import Engine
 #
-Engine().start()
+while True:
+    Engine().start()
+    time.sleep(3)
 # import redis
 # import pickle
 

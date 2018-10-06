@@ -7,7 +7,8 @@
 class Request(object):
     """请求url"""
 
-    def __init__(self, url, method=None, headers=None, params=None, formdata=None, proxy=None, callback=None):
+    def __init__(self, url, method=None, headers=None, params=None, formdata=None,
+                 proxy=None, callback=None, dont_filter=None, meta=None):
         self.url = url
         self.method = method or "GET"
         self.headers = headers or {
@@ -17,3 +18,5 @@ class Request(object):
         self.formdata = formdata
         self.proxy = proxy
         self.callback = callback or "parse"
+        self.dont_filter = dont_filter
+        self.meta = meta

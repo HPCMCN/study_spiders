@@ -6,16 +6,15 @@ DEFAULT_LOG_FILENAME = "baidu.log"
 
 SPIDERS = [
         "baidu.BaiduSpider",
-        "Douban.DoubanSpider"
+        # "Douban.DoubanSpider"
         ]
 
 PIPELINES = [
         "pipeline.BaiduPipeline",
-        "pipeline.DoubanPipeline"
+        # "pipeline.DoubanPipeline"
         ]
 
 SPIDER_MIDDLEWARES = [
-        #"middlewares.SpiderMiddleware",
         "middlewares.SpiderMiddleware"
         ]
 
@@ -29,6 +28,5 @@ ASYNC_TYPE = "coroutine"
 ASYNC_COUNT = 10
 TIME_SLEEP = 0.01
 
-# ROLE = None
-ROLE = "mater"
+# ROLE = "mater"
 # ROLE = "slave"

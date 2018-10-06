@@ -46,7 +46,8 @@ class Engine(object):
         self.has_request = True
 
     def main(self):
-        self._execute_start_requests()
+        if ROLE == "mater" or ROLE is None:
+            self._execute_start_requests()
         # for _ in range(ASYNC_COUNT):
         #     self.pool.apply_async(self._execute_request_response_item, callback=self._callback)
 
@@ -54,7 +55,8 @@ class Engine(object):
             if self.scheduler.request_count == self.response_count and self.scheduler.request_count != 0:
                 self.has_request = False
                 break
-            self.pool.apply_async(self._execute_request_response_item, callback=self._callback)
+            if ROLE == "slave" or ROLE is None:
+                self.pool.apply_async(self._execute_request_response_item, callback=self._callback)
 
             time.sleep(TIME_SLEEP)
 

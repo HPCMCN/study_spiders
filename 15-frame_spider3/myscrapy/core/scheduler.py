@@ -32,7 +32,10 @@ class Scheduler(object):
     def add_request(self, request):
         """判断并添加url到指纹集合中"""
         fingerprint = self._get_fingerprint(request)
-        if self._filter_request(fingerprint):
+        if request.dont_filter is not None:
+            self.request_queue.put(request)
+            self.request_count += 1
+        elif self._filter_request(fingerprint):
             self.request_queue.put(request)
             self.fingerprint.add(fingerprint)
             self.request_count += 1
