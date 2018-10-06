@@ -18,7 +18,7 @@ elif ASYNC_TYPE == "thread":
     from multiprocessing.dummy import Pool
 else:
     raise ImportError("Not support type of {}".format(ASYNC_TYPE))
-print(ASYNC_TYPE)
+print("开启: {}".format(ASYNC_TYPE))
 
 
 # noinspection PyUnusedLocal,PyUnresolvedReferences,SpellCheckingInspection
@@ -47,13 +47,15 @@ class Engine(object):
 
     def main(self):
         self._execute_start_requests()
-        for _ in range(ASYNC_COUNT):
-            self.pool.apply_async(self._execute_request_response_item, callback=self._callback)
+        # for _ in range(ASYNC_COUNT):
+        #     self.pool.apply_async(self._execute_request_response_item, callback=self._callback)
 
         while True:
             if self.scheduler.request_count == self.response_count and self.scheduler.request_count != 0:
                 self.has_request = False
                 break
+            self.pool.apply_async(self._execute_request_response_item, callback=self._callback)
+
             time.sleep(TIME_SLEEP)
 
         self.pool.close()
@@ -76,7 +78,7 @@ class Engine(object):
         # 取出队列中的url
         request = self.scheduler.get_request()
         if request is None:
-            return
+            return True
         # 请求之前预处理, download中间件
         for download in self.download_mids:
             request = download.process_request(request)
@@ -108,7 +110,9 @@ class Engine(object):
         self.response_count += 1
 
     def _callback(self, foo):
-        if self.has_request is True:
+        if foo:
+            return True
+        elif self.has_request is True:
             self.pool.apply_async(self._execute_request_response_item, callback=self._callback)
 
     def start(self):
