@@ -22,3 +22,8 @@ SPIDER_MIDDLEWARES = [
 DOWNLOAD_MINDDLEWARES = [
         # "middlewares.DownloadMiddleware",
         ]
+
+
+# ASYNC_TYPE = "thread"
+ASYNC_TYPE = "coroutine"
+ASYNC_COUNT = 10

@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40d37b8d-bff0-4eff-b8d6-e8af37804a1b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/myscrapy/async/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/myscrapy/async/coroutine.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../14-frame_spider2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../14-frame_spider2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/setting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myscrapy/config/default_setting.py" beforeDir="false" afterPath="$PROJECT_DIR$/myscrapy/config/default_setting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myscrapy/core/engine.py" beforeDir="false" afterPath="$PROJECT_DIR$/myscrapy/core/engine.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,7 +22,7 @@
     <SUITE FILE_PATH="coverage/15_frame_spider3$start__1_.coverage" NAME="start (1) Coverage Results" MODIFIED="1538746899322" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
     <SUITE FILE_PATH="coverage/13_frame_spider$engine.coverage" NAME="engine Coverage Results" MODIFIED="1538041487411" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/myscrapy/core" />
     <SUITE FILE_PATH="coverage/13_frame_spider$start.coverage" NAME="start Coverage Results" MODIFIED="1538044125103" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/15_frame_spider3$start.coverage" NAME="start Coverage Results" MODIFIED="1538747993217" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
+    <SUITE FILE_PATH="coverage/15_frame_spider3$start.coverage" NAME="start Coverage Results" MODIFIED="1538806453372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-54110940">
@@ -88,33 +94,36 @@
     <session id="127805538">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.24" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.33" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="34" />
+          <entry key="py" value="38" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="34" />
+          <entry key="Python" value="38" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="338" />
+          <entry key="py" value="1105" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="338" />
+          <entry key="Python" value="1105" />
         </counts>
       </usages-collector>
     </session>
@@ -124,8 +133,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myscrapy/config/default_setting.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+            <state relative-caret-position="-18">
+              <caret column="15" selection-start-column="15" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -133,11 +142,34 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myscrapy/core/engine.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="78" column="15" selection-start-line="78" selection-start-column="15" selection-end-line="78" selection-end-column="15" />
+            <state relative-caret-position="96">
+              <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
               <folding>
-                <element signature="e#83#112#0" expanded="true" />
+                <element signature="e#83#94#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myscrapy/async/coroutine.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="48">
+              <caret line="2" selection-start-line="2" selection-end-line="6" selection-end-column="11" />
+              <folding>
+                <element signature="e#52#87#0" expanded="true" />
+                <marker date="1538758706541" expanded="true" signature="273:367" ph="..." />
+                <marker date="1538758706541" expanded="true" signature="361:362" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code/setting.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="458">
+              <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -145,11 +177,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myscrapy/core/scheduler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="650">
+            <state relative-caret-position="530">
               <caret line="61" column="25" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
-              <folding>
-                <element signature="e#83#107#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -157,8 +186,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myscrapy/http/request.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-19">
-              <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+            <state relative-caret-position="120">
+              <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -166,7 +195,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/Douban.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
+            <state relative-caret-position="792">
               <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
             </state>
           </provider>
@@ -175,7 +204,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code/baidu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
+            <state relative-caret-position="312">
               <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding>
                 <element signature="e#84#123#0" expanded="true" />
@@ -211,12 +240,10 @@
         <option value="$PROJECT_DIR$/myscrapy/__init__.py" />
         <option value="$PROJECT_DIR$/myscrapy/config/setting.py" />
         <option value="$PROJECT_DIR$/code/start.py" />
-        <option value="$PROJECT_DIR$/code/setting.py" />
         <option value="$PROJECT_DIR$/code/middlewares.py" />
         <option value="$PROJECT_DIR$/myscrapy/http/response.py" />
         <option value="$PROJECT_DIR$/myscrapy/core/pipeline.py" />
         <option value="$PROJECT_DIR$/myscrapy/utils/logger.py" />
-        <option value="$PROJECT_DIR$/myscrapy/config/default_setting.py" />
         <option value="$PROJECT_DIR$/myscrapy/core/download.py" />
         <option value="$PROJECT_DIR$/code/spider.py" />
         <option value="$PROJECT_DIR$/myscrapy/core/spider.py" />
@@ -225,6 +252,9 @@
         <option value="$PROJECT_DIR$/version.txt" />
         <option value="$PROJECT_DIR$/code/Douban.py" />
         <option value="$PROJECT_DIR$/code/baidu.py" />
+        <option value="$PROJECT_DIR$/myscrapy/async/coroutine.py" />
+        <option value="$PROJECT_DIR$/myscrapy/config/default_setting.py" />
+        <option value="$PROJECT_DIR$/code/setting.py" />
         <option value="$PROJECT_DIR$/myscrapy/core/engine.py" />
       </list>
     </option>
@@ -235,13 +265,15 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="130" />
     <option name="y" value="211" />
     <option name="width" value="1069" />
     <option name="height" value="491" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -269,19 +301,13 @@
               <item name="15-frame_spider3" type="b2602c69:ProjectViewProjectNode" />
               <item name="15-frame_spider3" type="462c0819:PsiDirectoryNode" />
               <item name="myscrapy" type="462c0819:PsiDirectoryNode" />
+              <item name="async" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="15-frame_spider3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="15-frame_spider3" type="462c0819:PsiDirectoryNode" />
+              <item name="myscrapy" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="15-frame_spider3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="15-frame_spider3" type="462c0819:PsiDirectoryNode" />
-              <item name="myscrapy" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="15-frame_spider3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="15-frame_spider3" type="462c0819:PsiDirectoryNode" />
-              <item name="myscrapy" type="462c0819:PsiDirectoryNode" />
-              <item name="http" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -354,13 +380,13 @@
     <frame x="0" y="25" width="1916" height="801" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15795091" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16115262" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.71005917" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3988183" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39792898" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -368,7 +394,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.24408284" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3846154" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32988167" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -424,9 +450,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
           <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="32" selection-end-column="39" />
-          <folding>
-            <element signature="e#82#91#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -471,13 +494,6 @@
     <entry file="file://$PROJECT_DIR$/code/pipeline.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/code/setting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-48">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code/spider.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -492,13 +508,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myscrapy/config/default_setting.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -520,9 +529,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="17" column="40" lean-forward="true" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-          <folding>
-            <element signature="e#81#111#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -533,26 +539,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myscrapy/core/scheduler.py">
+    <entry file="file://$PROJECT_DIR$/myscrapy/http/request.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="61" column="25" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
-          <folding>
-            <element signature="e#83#107#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/Douban.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
+        <state relative-caret-position="792">
           <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code/baidu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
+        <state relative-caret-position="312">
           <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
           <folding>
             <element signature="e#84#123#0" expanded="true" />
@@ -560,19 +563,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myscrapy/http/request.py">
+    <entry file="file://$PROJECT_DIR$/myscrapy/core/scheduler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-19">
-          <caret line="5" column="14" lean-forward="true" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+        <state relative-caret-position="530">
+          <caret line="61" column="25" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myscrapy/config/default_setting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-18">
+          <caret column="15" selection-start-column="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code/setting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myscrapy/async/coroutine.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" selection-start-line="2" selection-end-line="6" selection-end-column="11" />
+          <folding>
+            <element signature="e#52#87#0" expanded="true" />
+            <marker date="1538758706541" expanded="true" signature="273:367" ph="..." />
+            <marker date="1538758706541" expanded="true" signature="361:362" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/myscrapy/core/engine.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="78" column="15" selection-start-line="78" selection-start-column="15" selection-end-line="78" selection-end-column="15" />
+        <state relative-caret-position="96">
+          <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
           <folding>
-            <element signature="e#83#112#0" expanded="true" />
+            <element signature="e#83#94#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 # Power by HPCM   2018-09-27 15:39:27
+import time
 from datetime import datetime
-from multiprocessing.dummy import Pool
 
 from .scheduler import Scheduler
 from .download import Download
@@ -11,8 +11,17 @@ from ..http.request import Request
 
 from ..utils.logger import *
 
+# noinspection SpellCheckingInspection
+if ASYNC_TYPE == "coroutine":
+    from ..async.coroutine import Pool
+elif ASYNC_TYPE == "thread":
+    from multiprocessing.dummy import Pool
+else:
+    raise ImportError("Not support type of {}".format(ASYNC_TYPE))
+print(ASYNC_TYPE)
 
-# noinspection PyUnusedLocal,PyUnresolvedReferences
+
+# noinspection PyUnusedLocal,PyUnresolvedReferences,SpellCheckingInspection
 class Engine(object):
     """引擎, 中心调度"""
 
@@ -30,7 +39,7 @@ class Engine(object):
         self.spider_mids = self.auto_import_module(SPIDER_MIDDLEWARES)
         self.download_mids = self.auto_import_module(DOWNLOAD_MINDDLEWARES)
         # 创建对象
-        self.pool = Pool(10)
+        self.pool = Pool(ASYNC_COUNT)
         # 响应计数
         self.response_count = 0
         # 判断是否含有请求
@@ -38,12 +47,17 @@ class Engine(object):
 
     def main(self):
         self._execute_start_requests()
+        for _ in range(ASYNC_COUNT):
+            self.pool.apply_async(self._execute_request_response_item, callback=self._callback)
+
         while True:
-            if self.scheduler.request_count == self.response_count and self.response_count != 0:
+            if self.scheduler.request_count == self.response_count and self.scheduler.request_count != 0:
                 self.has_request = False
                 break
-            self.pool.apply_async(self._execute_request_response_item)
+            time.sleep(TIME_SLEEP)
+
         self.pool.close()
+
         self.pool.join()
 
     def _execute_start_requests(self):
@@ -62,7 +76,7 @@ class Engine(object):
         # 取出队列中的url
         request = self.scheduler.get_request()
         if request is None:
-            return True
+            return
         # 请求之前预处理, download中间件
         for download in self.download_mids:
             request = download.process_request(request)
@@ -75,7 +89,6 @@ class Engine(object):
         spider = self.spiders[request.name]
         # 使用生成器获取多个数据解析结果
         parse_func = getattr(spider, request.callback)
-        print("***"*20)
         for result in parse_func(response):
             # 判断解析后的数据是url, 还是data:
             if isinstance(result, Request):
@@ -95,9 +108,6 @@ class Engine(object):
         self.response_count += 1
 
     def _callback(self, foo):
-        if foo is True:
-            return True
-        print(foo)
         if self.has_request is True:
             self.pool.apply_async(self._execute_request_response_item, callback=self._callback)
 
