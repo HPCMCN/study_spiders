@@ -24,11 +24,17 @@ ROLE = None
 # ROLE = "mater"
 # ROLE = "slave"
 
-# 接口兼容redis_queue
+# 接口兼容 redis_queue
 REDIS_QUEUE_NAME = "request_queue"
 REDIS_QUEUE_HOST = "127.0.0.1"
 REDIS_QUEUE_PORT = "6379"
 REDIS_QUEUE_DB = 9
+
+# 接口兼容 redis_set
+REDIS_SET_NAME = "set"
+REDIS_SET_HOST = "127.0.0.1"
+REDIS_SET_PORT = "6379"
+REDIS_SET_DB = 11
 try:
     # noinspection PyPackageRequirements
     from setting import *

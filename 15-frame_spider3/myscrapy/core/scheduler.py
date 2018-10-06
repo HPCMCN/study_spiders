@@ -8,8 +8,10 @@ import w3lib.url
 from ..config.default_setting import *
 if ROLE == "master" or "slave":
     from ..utils.queue import Queue
+    from ..utils.fingerprint_set import RedisFingerprintSet as Set
 elif ROLE is None:
     from six.moves.queue import Queue
+    from ..utils.fingerprint_set import PythonFingerprintSet as Set
 else:
     raise ImportError("Not Support type of {}".format(ROLE))
 # noinspection PyPackageRequirements
@@ -23,7 +25,7 @@ class Scheduler(object):
         # 请求队列
         self.request_queue = Queue()
         # 请求指纹
-        self.fingerprint = set()
+        self.fingerprint = Set()
         # 请求计数
         self.request_count = 0
 
@@ -39,7 +41,7 @@ class Scheduler(object):
 
     def _filter_request(self, fingerprint):
         """判断url是否存在于指纹集合中"""
-        return fingerprint not in self.fingerprint
+        return not self.fingerprint.filter_fp(fingerprint)
 
     @staticmethod
     def _get_fingerprint(request):
